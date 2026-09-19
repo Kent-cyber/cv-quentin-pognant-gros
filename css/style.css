@@ -5,7 +5,7 @@
   --color-blue-gray: #a7b4c5;
   --color-ivory: #f5f0e8;
 
-  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-title: "Cinzel", Georgia, serif;
   --font-body: "Cormorant Garamond", Georgia, serif;
 
   --page-padding: 1rem;
@@ -38,6 +38,10 @@ body {
   background-repeat: no-repeat;
 
   min-height: 100vh;
+}
+
+h1, h2, h3, .header__name {
+  font-family: var(--font-title);
 }
 
 img {
@@ -85,7 +89,6 @@ button {
 }
 
 .header__name {
-  font-family: var(--font-display);
 
   font-size: clamp(1.15rem, 5.5vw, 1.65rem);
   line-height: 1;
@@ -194,8 +197,7 @@ button {
 .hero__title {
   min-width: 0;
   margin: 0;
-
-  font-family: var(--font-display);
+  
   font-size: clamp(1.65rem, 7vw, 2.2rem);
   font-weight: 400;
   line-height: 1.05;
@@ -236,8 +238,6 @@ button {
   margin: 0;
 
   flex-shrink: 0;
-
-  font-family: var(--font-display);
 
   font-size: clamp(1.3rem, 5vw, 1.7rem);
 
@@ -291,7 +291,7 @@ button {
 
   background: var(--color-blue-gray);
 
-  font-family: var(--font-display);
+  font-family: var(--font-title);
 
   font-size: 1rem;
 
@@ -448,8 +448,6 @@ button {
 .timeline-page__heading h1 {
   margin: 0;
 
-  font-family: var(--font-display);
-
   font-size: clamp(1.7rem, 7vw, 2.6rem);
 
   font-weight: 400;
@@ -559,8 +557,6 @@ button {
 .timeline__title {
   margin: 0 0 0.65rem;
 
-  font-family: var(--font-display);
-
   font-size: clamp(1.3rem, 5.5vw, 1.8rem);
 
   font-weight: 400;
@@ -651,8 +647,6 @@ button {
         0
         0
         1.5rem;
-
-    font-family: var(--font-display);
 
     font-size: clamp(2rem, 9vw, 2.8rem);
 
@@ -754,8 +748,6 @@ button {
 .section-heading h2 {
     margin: 0;
 
-    font-family: var(--font-display);
-
     font-size: clamp(1.6rem, 7vw, 2rem);
 
     font-weight: 400;
@@ -767,15 +759,15 @@ button {
 
 /* ============================ catégories ================================== */
 
-.skill-category {
+.skills-category {
     margin-bottom: 3rem;
 }
 
-.skill-category:last-child {
+.skills-category:last-child {
     margin-bottom: 0;
 }
 
-.skill-category__title {
+.skills-category__title {
     margin:
         0
         0
@@ -787,8 +779,6 @@ button {
 
     gap: 0.8rem;
 
-    font-family: var(--font-display);
-
     font-size: clamp(1.25rem, 5.5vw, 1.6rem);
 
     font-weight: 400;
@@ -798,7 +788,7 @@ button {
 
 /* =============================== petit losange ================================ */
 
-.skill-category__symbol {
+.skills-category__symbol {
     width: 25px;
     height: 25px;
 
@@ -812,7 +802,7 @@ button {
     transform: rotate(45deg);
 }
 
-.skill-category__symbol span {
+.skills-category__symbol span {
     width: 9px;
     height: 9px;
 
@@ -823,7 +813,7 @@ button {
 
 /* ===================================== listes =================================== */
 
-.skill-category__list {
+.skills-category__list {
     margin: 0;
 
     padding-left: 2.75rem;
@@ -831,7 +821,7 @@ button {
     list-style: none;
 }
 
-.skill-category__list li {
+.skills-category__list li {
     margin-bottom: 0.4rem;
 
     font-size: clamp(1rem, 4.5vw, 1.2rem);
@@ -875,6 +865,25 @@ button {
 ======================================== */
 
 @media (min-width: 768px) {
+  .header {
+        min-height: 100px;
+        padding: 1rem 1.5rem;
+    }
+
+    .header__logo {
+        width: 52px;
+        height: auto;
+    }
+
+    .header__name {
+        font-size: 1.8rem;
+    }
+
+    .theme-toggle {
+        width: 52px;
+        height: 52px;
+    }
+
   .hero {
     grid-template-columns: 180px minmax(0, 1fr);
     gap: 2rem;
@@ -963,6 +972,23 @@ button {
 ======================================== */
 
 @media (min-width: 1024px) {
+  .header {
+        min-height: 125px;
+    }
+
+    .header__logo {
+        width: 74px;
+    }
+
+    .header__name {
+        font-size: 2.5rem;
+    }
+
+    .theme-toggle {
+        width: 74px;
+        height: 74px;
+    }
+
   .home {
     width: min(100%, 1000px);
   }
