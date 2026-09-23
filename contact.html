@@ -19,10 +19,54 @@
             <img src="assets/UI/light-actif.png" alt="bouton changement de thème">
         </button>
     </header>
-    <main>
-        <section style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <img src="assets/work-in-progress.png" width="600px" alt="personnage avec un casque de chantier">
-            <p style="font-size: 48px;">Work in progress</p>
+    <main class="contact-page">
+        <section class="contact-container">
+            <header class="contact__header">
+                <span class="contact__diamond" aria-hidden="true">
+                    <span></span>
+                </span>
+
+                <h1>Formulaire de contact</h1>
+            </header>
+
+            <form class="contact-form" action="#" method="post">
+                <div class="contact-form__field">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+
+                <div class="contact-form__field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="contact-form__field">
+                    <label for="phone">Téléphone <span class="contact-form__optional">(falcultatif)</span></label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel">
+                </div>
+
+                <div class="contact-form__field">
+                    <label for="msg">Message</label>
+                    <textarea name="msg" id="msg" rows="7" required></textarea>
+                </div>
+
+                <div class="contact-form__actions">
+                    <button class="contact-form__submit" type="submit">Envoyer</button>
+                </div>
+            </form>
+
+            <section class="download-cv">
+                <div class="download-cv__separator" aria-hidden="true">
+                    <span></span>
+                    <span class="download-cv__separator-diamond"></span>
+                    <span></span>
+                </div>
+
+                <h2>Mon CV</h2>
+                <p>Vous préférez le format traditionnel ?</p>
+                <a class="download-cv__button" href="">Télécharger mon CV <span aria-hidden="true">↓</span></a>
+
+            </section>
         </section>
     </main>
     

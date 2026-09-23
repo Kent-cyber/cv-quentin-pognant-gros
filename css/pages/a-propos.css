@@ -1,0 +1,220 @@
+/* ========================================
+   PAGE À PROPOS
+======================================== */
+
+.about-page {
+    width: 100%;
+
+    padding:
+        clamp(3rem, 12vw, 6rem)
+        1rem
+        3rem;
+}
+
+/* ================================= Panneau Principal ========================= */
+
+.about-panel {
+    width: min(100%, 620px);
+
+    margin-inline: auto;
+
+    padding:
+        1.75rem
+        1.5rem
+        2.5rem;
+
+    color: var(--color-navy);
+
+    background: rgb(166 181 199 / 0.82);
+
+    border: 1px solid var(--color-navy);
+}
+
+/* ======================================== titre =================================== */
+
+.about-panel__title {
+    margin:
+        0
+        0
+        1.5rem;
+
+    font-size: clamp(2rem, 9vw, 2.8rem);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+/* ======================================= introduction ================================ */
+
+.about-panel__intro {
+    margin:
+        0
+        0
+        2.5rem;
+
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
+
+    line-height: 1.45;
+}
+
+/* ========================================= coordonnées ============================== */
+
+.contact-info {
+    margin:
+        0
+        0
+        3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.1rem;
+
+    font-style: normal;
+}
+
+.contact-info__item {
+    display: grid;
+
+    grid-template-columns: 28px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+}
+
+.contact-info__item svg {
+    display: grid;
+    place-items: center;
+
+    width: 28px;
+    height: 28px;
+
+    color: var(--color-navy);
+}
+
+/* ================================ titre compétences ========================= */
+
+.section-heading {
+    display: grid;
+
+    grid-template-columns:
+        minmax(20px, 1fr)
+        auto
+        minmax(20px, 1fr);
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    margin-bottom: 2rem;
+}
+
+.section-heading__line {
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--color-navy)
+    );
+}
+
+.section-heading__line:last-child {
+    background: linear-gradient(
+        to right,
+        var(--color-navy),
+        transparent
+    );
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(1.6rem, 7vw, 2rem);
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+/* ============================ catégories ================================== */
+
+.skills-category {
+    margin-bottom: 3rem;
+}
+
+.skills-category:last-child {
+    margin-bottom: 0;
+}
+
+.skills-category__title {
+    margin:
+        0
+        0
+        1.5rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    font-size: clamp(1.25rem, 5.5vw, 1.6rem);
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+
+/* =============================== petit losange ================================ */
+
+.skills-category__symbol {
+    width: 25px;
+    height: 25px;
+
+    flex: 0 0 25px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1.5px solid var(--color-navy);
+
+    transform: rotate(45deg);
+}
+
+.skills-category__symbol span {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: var(--color-navy);
+}
+
+/* ===================================== listes =================================== */
+
+.skills-category__list {
+    margin: 0;
+
+    padding-left: 2.75rem;
+
+    list-style: none;
+}
+
+.skills-category__list li {
+    margin-bottom: 0.4rem;
+
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+
+    line-height: 1.35;
+}

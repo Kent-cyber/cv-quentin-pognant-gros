@@ -1,0 +1,363 @@
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+  min-height: 75px;
+
+  padding: 0.75rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  background: var(--color-blue-gray);
+}
+
+.header__identity {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.header__logo {
+  width: 42px;
+  flex-shrink: 0;
+}
+
+.header__name {
+
+  font-size: clamp(1.15rem, 5.5vw, 1.65rem);
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+/* ================================== Theme Toggle ===================== */
+
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--transition),
+    filter var(--transition);
+}
+
+.theme-toggle img {
+  width: 100%;
+}
+
+.theme-toggle:active {
+  transform: scale(0.94);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 4px;
+}
+
+/* ========================================
+   PAGE
+======================================== */
+
+.home {
+  width: min(100%, 780px);
+
+  margin-inline: auto;
+
+  padding: 1.5rem var(--page-padding) 2.5rem;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ========================== photo =========================== */
+
+.portrait {
+  position: relative;
+
+  width: 110%;
+  aspect-ratio: 1;
+}
+
+.portrait__photo {
+  position: absolute;
+
+  inset: 13%;
+
+  width: 74%;
+  height: 74%;
+
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 2px;
+}
+
+.portrait__frame {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ============================= titre =============================== */
+
+.hero__title {
+  min-width: 0;
+  margin: 0;
+  
+  font-size: clamp(1.65rem, 7vw, 2.2rem);
+  font-weight: 400;
+  line-height: 1.05;
+
+  text-transform: uppercase;
+}
+
+/* ========================================
+   À PROPOS
+======================================== */
+
+.about {
+  width: min(100%, 555px);
+
+  margin: clamp(2rem, 8vw, 3.5rem) auto 0;
+
+  padding: 1.5rem clamp(1.25rem, 5vw, 2rem);
+
+  border: 1px solid var(--color-navy);
+  border-radius: 6px;
+
+  background: rgb(245 240 232 / 0.15);
+
+  backdrop-filter: blur(1px);
+}
+
+/* ========================= titre de section ======================== */
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.45rem;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  flex-shrink: 0;
+
+  font-size: clamp(1.3rem, 5vw, 1.7rem);
+
+  font-weight: 400;
+
+  text-transform: uppercase;
+}
+
+.section-title__line {
+  height: 1px;
+
+  flex: 1;
+
+  background: var(--color-navy);
+}
+
+.section-title__diamond {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  background: var(--color-navy);
+
+  transform: rotate(45deg);
+}
+
+/* ==================================== texte ========================= */
+
+.about__text {
+  margin: 1.25rem 0 1.75rem;
+
+  font-size: clamp(1.15rem, 5vw, 1.45rem);
+
+  line-height: 1.35;
+}
+
+/* ============================ bouton secondaire ========================= */
+
+.secondary-button {
+  width: fit-content;
+
+  margin-inline: auto;
+
+  padding: 0.75rem 1rem;
+
+  display: block;
+
+  border: 1px solid var(--color-navy);
+  border-radius: 2px;
+
+  background: var(--color-blue-gray);
+
+  font-family: var(--font-title);
+
+  font-size: 1rem;
+
+  text-transform: uppercase;
+
+  transition:
+    transform var(--transition),
+    filter var(--transition);
+}
+
+.secondary-button:hover {
+  filter: brightness(1.05);
+}
+
+.secondary-button:active {
+  transform: translateY(1px);
+}
+
+.secondary-button:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 4px;
+}
+
+/* ========================================
+   CARTES CV
+======================================== */
+
+.cv-navigation {
+  width: 100%;
+
+  margin: clamp(1.5rem, 7vw, 2.5rem) auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-areas:
+    "experiences formations"
+    "passions passions";
+
+  column-gap: 1rem;
+  row-gap: 0.75rem;
+
+  justify-items: center;
+}
+
+.cv-card {
+  width: clamp(150px, 40vw, 180px);
+
+  display: block;
+
+  transition:
+    transform var(--transition),
+    filter var(--transition);
+}
+
+.cv-card img {
+  width: 100%;
+  height: auto;
+}
+
+.cv-card--experiences {
+  grid-area: experiences;
+}
+
+.cv-card--formations {
+  grid-area: formations;
+}
+
+.cv-card--passions {
+  grid-area: passions;
+}
+
+/* ================================== Interactions ======================== */
+
+.cv-card:hover {
+  transform: translateY(-3px);
+
+  filter: brightness(1.04) drop-shadow(0 5px 5px rgb(16 35 61 / 0.15));
+}
+
+.cv-card:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.cv-card:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 5px;
+}
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact {
+  margin-top: clamp(1.5rem, 7vw, 3rem);
+
+  display: flex;
+  justify-content: center;
+}
+
+.contact__button {
+  width: min(85%, 430px);
+
+  display: block;
+
+  transition:
+    transform var(--transition),
+    filter var(--transition);
+}
+
+.contact__button img {
+  width: 100%;
+}
+
+.contact__button:hover {
+  transform: translateY(-3px);
+
+  filter: brightness(1.04) drop-shadow(0 6px 6px rgb(16 35 61 / 0.18));
+}
+
+.contact__button:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.contact__button:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 5px;
+}

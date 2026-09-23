@@ -1,0 +1,185 @@
+/* ========================================
+   PAGE EXPÉRIENCES / FORMATIONS
+======================================== */
+
+.timeline-page {
+  width: min(100%, 780px);
+
+  margin-inline: auto;
+
+  padding: clamp(4rem, 15vw, 7rem) 1.5rem 4rem;
+}
+
+/* ================================ titre ======================== */
+
+.timeline-page__heading {
+  display: flex;
+  align-items: center;
+
+  gap: 1.25rem;
+
+  margin-bottom: 1rem;
+}
+
+.timeline-page__heading h1 {
+  margin: 0;
+
+  font-size: clamp(1.7rem, 7vw, 2.6rem);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  text-transform: uppercase;
+}
+
+/* ================================== losange du titre ========== */
+
+.timeline-page__symbol {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  flex: 0 0 42px;
+
+  border: 2px solid var(--color-navy);
+
+  transform: rotate(45deg);
+
+  display: grid;
+  place-items: center;
+}
+
+.timeline-page__symbol span {
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+
+  background: var(--color-navy);
+}
+
+/* ================================= timeline ===================== */
+
+.timeline {
+  --timeline-spacing: 2rem;
+
+    position: relative;
+
+    margin-left: 20px;
+
+    padding:
+        1rem
+        0
+        1rem
+        var(--timeline-spacing);
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 2px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        to bottom,
+        var(--color-navy) 0%,
+        var(--color-navy) 65%,
+        rgb(16 35 61 / 0.6) 82%,
+        rgb(16 35 61 / 0.2) 94%,
+        transparent 100%
+    );
+}
+
+/* ================================= expérience ================== */
+
+.timeline__item {
+  position: relative;
+
+  padding-bottom: clamp(2.5rem, 10vw, 4.5rem);
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+/* MARQUEUR SUR LA LIGNE */
+
+.timeline__marker {
+    position: absolute;
+
+    top: 0.45rem;
+    left: calc(-1 * var(--timeline-spacing));
+
+    width: 10px;
+    height: 10px;
+
+    background: var(--color-navy);
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+}
+
+/* ================================== poste =========================== */
+
+.timeline__title {
+  margin: 0 0 0.65rem;
+
+  font-size: clamp(1.3rem, 5.5vw, 1.8rem);
+
+  font-weight: 400;
+
+  line-height: 1.25;
+
+  text-transform: uppercase;
+}
+
+.timeline__title span {
+  display: inline;
+}
+
+/* ================================== date ============================= */
+
+.timeline__date {
+  margin: 0 0 0.8rem;
+
+  font-size: clamp(1.05rem, 4.5vw, 1.3rem);
+
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* ================================== missions ======================== */
+
+.timeline__missions {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.timeline__missions li {
+  margin-bottom: 0.35rem;
+
+  font-size: clamp(1.1rem, 4.8vw, 1.4rem);
+
+  line-height: 1.4;
+}
+
+/* ================================== location ============================= */
+
+.timeline__location {
+    margin: 0;
+
+    font-size: clamp(1.1rem, 4.8vw, 1.4rem);
+    line-height: 1.4;
+}

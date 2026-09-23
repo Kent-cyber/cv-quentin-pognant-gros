@@ -1,0 +1,305 @@
+/* ========================================
+   PAGE CONTACT
+======================================== */
+
+.contact-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 3.5rem 1rem 5rem;
+
+    color: var(--color-navy);
+}
+
+.contact-container {
+    width: min(100%, 700px);
+    margin-inline: auto;
+}
+
+/* =========================================== titre =================== */
+
+.contact__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+
+    text-align: center;
+}
+
+.contact__header h1 {
+    margin: 0;
+
+    font-family: var(--font-title);
+
+    font-size: clamp(2rem, 9vw, 3rem);
+
+    font-weight: 400;
+    line-height: 1.15;
+
+    text-transform: uppercase;
+}
+
+/* ====================================== losange ============================ */
+
+.contact__diamond {
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1.5px solid var(--color-navy);
+
+    transform: rotate(45deg);
+}
+
+.contact__diamond span {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: var(--color-navy);
+}
+
+/* ========================================= formulaire ========================= */
+
+.contact-form {
+    padding: 2rem 1.25rem;
+
+    border: 1px solid var(--color-navy);
+
+    background: rgb(166 181 199 / 0.82);
+}
+
+/* ====================================== champs ================================ */
+
+.contact-form__field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.contact-form__field label {
+    font-family: var(--font-body);
+
+    font-size: 1.3rem;
+}
+
+.contact-form__optional {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ============================== inputs ======================================= */
+
+.contact-form__field input,
+.contact-form__field textarea {
+    width: 100%;
+
+    padding: 0.8rem 1rem;
+
+    color: var(--color-navy);
+
+    background-color: var(--color-ivory);
+
+    border: 1px solid transparent;
+
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.contact-form__field input {
+    min-height: 48px;
+}
+
+.contact-form__field textarea {
+    min-height: 180px;
+
+    resize: vertical;
+}
+
+/* ========================================== focus ========================================= */
+
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+    border-color: var(--color-navy);
+
+    box-shadow:
+        0 0 0 2px rgb(16 35 61 / 0.15);
+
+    background-color: #fffaf2;
+}
+
+/* =================================== bouton envoyer ================================== */
+
+.contact-form__actions {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2rem;
+}
+
+.contact-form__submit {
+    min-width: 150px;
+
+    padding: 0.85rem 1.75rem;
+
+    color: var(--color-ivory);
+
+    background-color: var(--color-navy);
+
+    border: 1px solid var(--color-navy);
+
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.contact-form__submit:hover {
+    transform: translateY(-2px);
+}
+
+.contact-form__submit:active {
+    transform: translateY(0);
+}
+
+.contact-form__submit:focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 4px;
+}
+
+/* ========================================== téléchargement cv ========================= */
+
+.download-cv {
+    margin-top: 4rem;
+
+    text-align: center;
+}
+
+.download-cv h2 {
+    margin:
+        1.5rem
+        0
+        0.5rem;
+
+    font-family: var(--font-title);
+
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+
+.download-cv p {
+    margin:
+        0
+        0
+        1.5rem;
+
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+}
+
+/* =================================== séparateur =============================== */
+
+.download-cv__separator {
+    display: grid;
+
+    grid-template-columns:
+        minmax(30px, 1fr)
+        auto
+        minmax(30px, 1fr);
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    width: min(100%, 350px);
+
+    margin-inline: auto;
+}
+
+.download-cv__separator > span:first-child,
+.download-cv__separator > span:last-child {
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--color-navy)
+    );
+}
+
+.download-cv__separator > span:last-child {
+    background: linear-gradient(
+        to right,
+        var(--color-navy),
+        transparent
+    );
+}
+
+.download-cv__separator-diamond {
+    width: 9px;
+    height: 9px;
+
+    background-color: var(--color-navy);
+
+    transform: rotate(45deg);
+}
+
+/* =============================== bouton téléchargement ======================= */
+
+.download-cv__button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.75rem;
+
+    padding: 1rem 1.5rem;
+
+    color: var(--color-ivory);
+
+    background-color: var(--color-navy);
+
+    border: 1px solid var(--color-navy);
+
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.download-cv__button:hover {
+    transform: translateY(-2px);
+}
+
+.download-cv__button:focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 4px;
+}
