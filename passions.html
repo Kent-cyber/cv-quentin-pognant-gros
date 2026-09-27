@@ -1,30 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Passions de Quentin Pognant-Gros">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Passions de Quentin Pognant-Gros" />
     <title>Passions | Quentin Pognant-Gros</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/logo/icône-de-moi.png">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/logo/icône-de-moi.png" />
+  </head>
+  <body>
     <header class="header">
-        <a class="header__identity" href="index.html" aria-label="Accueil">
-            <img class="header__logo" src="assets/logo/icône-de-moi.png" alt="icône du site">
-        </a>
-        <span class="header__name">Quentin Pognant-Gros</span>
+      <a class="header__identity" href="index.html" aria-label="Accueil">
+        <img
+          class="header__logo"
+          src="assets/logo/icône-de-moi.png"
+          alt="icône du site"
+        />
+      </a>
+      <span class="header__name">Quentin Pognant-Gros</span>
 
-        <button class="theme-toggle" type="button" aria-label="Activer le mode sombre">
-            <img src="assets/UI/light-actif.png" alt="bouton changement de thème">
-        </button>
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Activer le mode sombre"
+      >
+        <img src="assets/UI/light-actif.png" alt="bouton changement de thème" />
+      </button>
     </header>
-    <main>
-        <section style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <img src="assets/work-in-progress.png" width="600px" alt="personnage avec un casque de chantier">
-            <p style="font-size: 48px;">Work in progress</p>
-        </section>
+    <main class="passions-page">
+      <section class="passions-intro">
+        <h1 class="passions-intro__title">Passions</h1>
+        <div class="passions-intro__line"></div>
+
+        <p class="passions-intro__subtitle">
+          Ce qui m'accompagne hors du développement
+        </p>
+      </section>
+
+      <article class="passions-card">
+        <h2 class="passions-card__title">Jeux vidéo</h2>
+
+        <img class="passions-card__image" src="assets/passions/gaming.png" alt="Mon personnage inspiré de Hollow Knight jouant aux jeux vidéo">
+
+        <p class="passions-card__description">
+          Passionné de jeux vidéo depuis mon enfance, je suis un joueur attiré
+          par des expériences fortes et mémorables.
+        </p>
+
+        <div class="passions-carousel">
+            <button class="passions-carousel__button passions-carousel__button--previous" type="button" aria-label="Jeu précédent">
+                ‹
+            </button>
+
+            <div class="passions-carousel__content">
+                <div class="passions-carousel__placeholder">
+                    <p>Mes jeux favoris en carousel</p>
+                </div>
+            </div>
+
+            <button class="passions-carousel__button passions-carousel__button--next" type="button" aria-label="Jeu suivant">
+                ›
+            </button>
+        </div>
+      </article>
+
+      <article class="passions-card">
+        <h2 class="passions-card__title">Musique électronique</h2>  
+
+        <img class="passions-card__image" src="assets/passions/music.png" alt="Mon personnage inspiré de Hollow Knight écoutant de la musique">
+
+        <p class="passions-card__description">La musique électronique m'accompagne aussi bien dans mes moments de concentration que de détente.</p>
+
+        <a class="passions-card__link" href="https://open.spotify.com/playlist/6rz41yjPXaE64GncIWKm9G?si=07dc4c9d7b0d4734" target="_blank" rel="noopener noreferrer">Découvrir ma playlist <span>♪</span></a>
+      </article>
+
+      <article class="passions-card">
+        <h2 class="passions-card__title">Randonnée</h2>
+
+        <div class="passions-card__illustration">
+            <p>Illustration de mon personnage faisant de la randonnée</p>
+        </div>
+
+        <p class="passions-card__description">Vivant autour des montagnes, j'ai progressivement pris goût à la randonnée et aux moments passés en pleine nature.</p>
+
+        <div class="passions-carousel">
+            <button class="passions-carousel__button passions-carousel__button--previous" type="button" aria-label="Photo précédente">
+                ‹
+            </button>
+
+            <div class="passions-carousel__content">
+                <div class="passions-carousel__placeholder">
+                    <p>Quelques photos de mes randonnées</p>
+                </div>
+            </div>
+
+            <button class="passions-carousel__button passions-carousel__button--next" type="button" aria-label="Photo suivante">
+                ›
+            </button>
+        </div>
+      </article>
+
+      <section class="passions-refuge">
+        <div class="passions-refuge__illustration">
+            <p>Illustration de mon personnage se reposant sur un banc</p>
+        </div>
+
+        <p class="passions-refuge__quote">Un moment pour souffler avant de reprendre le chemin.</p>
+      </section>
     </main>
-    
-</body>
+  </body>
 </html>
